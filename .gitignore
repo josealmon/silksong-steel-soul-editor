@@ -1,0 +1,25 @@
+# Configuration files (contains user-specific paths)
+save_editor_config.ini
+
+# Backup files
+*.backup
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
