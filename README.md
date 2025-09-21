@@ -9,36 +9,13 @@ The script automatically modifies your save file (`userX.dat` where X is your sa
 ### Available Modes:
 
 - **0** - Normal mode (regular gameplay)
-- **1** - Steel Soul mode (one life, but can continue after death with this mod)
+- **1** - Steel Soul mode (one life, can be used even after death)
 - **2** - Steel Soul mode (original permadeath behavior)
-
-## Features
-
-- ✅ **Interactive mode** - Guides you through the process
-- ✅ **Flexible paths** - Works with any user and profile ID
-- ✅ **Saves configuration** - Remembers your save file location
-- ✅ **Multiple modes** - Choose between Normal, Steel Soul (modded), or Steel Soul (original)
-- ✅ **Automatic backups** - Always creates backups before modifying
-- ✅ **Easy restoration** - Simple backup restore functionality
-
-## Included files
-
-- `modify_silksong.bat` - Main script that automates the entire process
-- `silksong_save_editor.py` - Python tool that handles encryption/decryption
-- `restore_backup.bat` - Backup restoration script
-- `example_config.ini` - Example configuration file format
-- `README.md` - This instruction file
-
-**Auto-generated files:**
-
-- `save_editor_config.ini` - Your saved configuration (created automatically)## Requirements
 
 1. **Python 3.x** installed on your system
 
    - Download from: https://www.python.org/downloads/
    - During installation, check "Add Python to PATH"
-
-2. **cryptography library** (installed automatically)
 
 ## Usage
 
@@ -51,7 +28,7 @@ The script automatically modifies your save file (`userX.dat` where X is your sa
    - Choose your desired permadeath mode (0, 1, or 2)
    - The script will handle everything else automatically
 
-### Manual Method (Advanced)
+### Manual Method
 
 For command line usage:
 
@@ -69,35 +46,6 @@ Where `<mode>` is:
 - `1` for Steel Soul mode (modded)
 - `2` for Steel Soul mode (original)
 
-## Save file location
-
-The script will ask for your save file location on first run. The typical path structure is:
-
-```
-C:\Users\{USERNAME}\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\{PROFILE_ID}\userX.dat
-```
-
-**Examples:**
-
-- `C:\Users\john\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\123456789\user1.dat`
-- `C:\Users\maria\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\987654321\user2.dat`
-- `C:\Users\alex\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\555666777\user3.dat`
-
-**Where:**
-
-- `{USERNAME}` = Your Windows username
-- `{PROFILE_ID}` = Your unique profile ID (varies per user)
-- `X` = Your save slot number (1, 2, 3, etc.)
-
-**To find your profile ID and save file:**
-
-1. Navigate to `C:\Users\{USERNAME}\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\`
-2. Look for folders with numbers (like `114294607`)
-3. Inside each folder, look for files like `user1.dat`, `user2.dat`, `user3.dat`
-4. Choose the save file that corresponds to your game save slot
-
-**Configuration:** Once entered, your path is saved and will be remembered for future use.
-
 ## Additional Tools
 
 - **`restore_backup.bat`** - Use this if you need to restore the original file
@@ -108,27 +56,7 @@ C:\Users\{USERNAME}\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\{PROFILE
 - If something goes wrong, you can restore by copying the backup back to the original file
 - The script verifies the integrity of all files before proceeding
 
-## Restore backup
-
-If you need to restore your original save:
-
-1. Go to the save folder
-2. Delete or rename `userX.dat` (where X is your save slot)
-3. Rename `userX.dat.backup` to `userX.dat`
-
 ## Troubleshooting
-
-### Error: "Python is not installed"
-
-- Install Python from https://www.python.org/downloads/
-- Make sure to check "Add Python to PATH" during installation
-
-### Error: "Cannot find save file"
-
-- Verify that Hollow Knight Silksong is installed
-- Confirm that you have played at least once
-- Check that the path you entered is correct
-- Look for the correct profile ID folder
 
 ### Error: "cryptography is not installed"
 
@@ -158,12 +86,6 @@ The process uses the same encryption algorithm that Hollow Knight Silksong uses:
 3. **Modification**: Change `"permadeathMode"` to your selected value (0, 1, or 2)
 4. **Encryption**: JSON → Encrypt AES-ECB → Encode Base64 → Add headers
 5. **Backup**: Always creates `.backup` files before modification
-
-### Permadeath Mode Details:
-
-- **Mode 0 (Normal)**: Standard gameplay with respawning
-- **Mode 1 (Steel Soul - Modded)**: One life mode, but this mod allows continuing after death
-- **Mode 2 (Steel Soul - Original)**: True permadeath - game over on death
 
 ## Credits
 
