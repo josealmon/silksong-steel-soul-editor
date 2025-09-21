@@ -9,8 +9,8 @@ The script automatically modifies your save file (`userX.dat` where X is your sa
 ### Available Modes:
 
 - **0** - Normal mode (regular gameplay)
-- **1** - Steel Soul mode (one life, can be used even after death)
-- **2** - Steel Soul mode (original permadeath behavior)
+- **1** - Steel Soul mode (original permadeath behavior, can be used even after death)
+- **2** - Steel Soul mode (dead state)
 
 1. **Python 3.x** installed on your system
 
@@ -43,8 +43,8 @@ python silksong_save_editor.py "path\to\userX.dat" <mode>
 Where `<mode>` is:
 
 - `0` for Normal mode
-- `1` for Steel Soul mode (modded)
-- `2` for Steel Soul mode (original)
+- `1` for Steel Soul mode (alive state)
+- `2` for Steel Soul mode (dead state)
 
 ## Additional Tools
 
