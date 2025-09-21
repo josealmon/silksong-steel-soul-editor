@@ -238,8 +238,8 @@ def get_target_mode_interactive():
     """Get target permadeath mode from user input"""
     print("\nSelect the desired permadeath mode:")
     print("  0 - Normal mode (regular gameplay)")
-    print("  1 - Steel Soul mode (one life, but can continue after death with this mod)")
-    print("  2 - Steel Soul mode (original permadeath behavior)")
+    print("  1 - Steel Soul mode (original permadeath behavior, can be used even after death")
+    print("  2 - Steel Soul mode (dead state)")
     print()
     
     while True:
@@ -280,7 +280,7 @@ def main():
             if target_mode not in [0, 1, 2]:
                 print("Error: Mode must be 0, 1, or 2")
                 print("Usage: python silksong_save_editor.py <path_to_user2.dat> <mode>")
-                print("Modes: 0=Normal, 1=Steel Soul (modded), 2=Steel Soul (original)")
+                print("Modes: 0=Normal, 1=Steel Soul (original), 2=Steel Soul (dead state)")
                 return
         except ValueError:
             print("Error: Mode must be a number (0, 1, or 2)")
@@ -291,8 +291,8 @@ def main():
         print("  Command line mode: python silksong_save_editor.py <path_to_userX.dat> <mode>")
         print("\nModes:")
         print("  0 - Normal mode")
-        print("  1 - Steel Soul mode (modded - can continue after death)")
-        print("  2 - Steel Soul mode (original permadeath)")
+        print("  1 - Steel Soul mode (original permadeath behavior, can be used even after death)")
+        print("  2 - Steel Soul mode (dead state)")
         print("\nNote: userX.dat where X is your save slot (1, 2, 3, etc.)")
         return
     

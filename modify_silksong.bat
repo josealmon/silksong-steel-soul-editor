@@ -17,8 +17,8 @@ echo This script will modify your save file to change the permadeath mode.
 echo.
 echo Available modes:
 echo   0 - Normal mode (regular gameplay)
-echo   1 - Steel Soul mode (one life, but can continue after death with this mod)
-echo   2 - Steel Soul mode (original permadeath behavior)
+echo   1 - Steel Soul mode (original permadeath behavior, can be used even after death)
+echo   2 - Steel Soul mode (dead state)
 echo.
 echo IMPORTANT: An automatic backup of your original file will be created
 echo.
